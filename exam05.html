@@ -1,0 +1,21 @@
+<body>
+    <script>
+        let num = 12345;
+        let n1 = num % 10; //5
+        num = parseInt(num/10);
+
+        let n2 = parseInt(num / 10) % 10 //4
+        num = parseInt(num/10);
+        
+        let n3 = parseInt(num / 10 / 10) % 10 //3
+        num = parseInt(num/10);
+        
+        let n4 = parseInt(num / 10 / 10) % 10 //3
+        num = parseInt(num/10);
+        
+        let n5 = parseInt(num / 10 / 10) % 10 //3
+        num = parseInt(num/10);
+        console.log(n1, n2,n3, n4, n5);
+        console.log(num);
+    </script>
+</body>
