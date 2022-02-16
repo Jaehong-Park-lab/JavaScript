@@ -1,0 +1,31 @@
+<!-- 로또 1등 번호 맞추기
+
+
+
+4. 번호가 같으면 종료
+5. 번호가 다르면 1번부터 시도 -->
+
+<body>
+    <script>
+        // console.log([1, 2, 3] == [1, 2, 3].toString());
+        // console.log([1, 2, 3] == JSON.stringify([1, 2, 3]));
+
+        // 1. 중복되지 않는 번호 6개 추출
+        const selected = [];
+        while (selected.length < 3) {
+            const num = parseInt(Math.random() * 45) + 1; if (selected.indexOf(num) == -1) {
+                selected.push(num);
+            }
+        }
+        console.log(selected);
+
+        // 2. 실제 1등 번호와 비교, 
+        console.log(selected.sort((a, b) => a - b));
+
+        // 3. 추출된 번호를 정렬(오름차순)
+        const lotto = [1, 8, 16];
+        if (lotto == selected.toString()) {
+            console.log('맞히기 성공');
+        }
+    </script>
+</body>
