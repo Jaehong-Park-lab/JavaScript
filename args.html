@@ -1,0 +1,45 @@
+<body>
+    <script>
+        //static 으로 도배하기 (Method 영역)
+        
+        // --> JVM 쓰레기 수집 기능(X)
+
+        //int num=123;
+        //println(123);
+        //println(num);
+        const func = (v) => console.log(v);
+
+        function pringAll(...args) {
+            //화살표 함수 Arrow function (간단하게 작성)
+            args.forEach((v, i, a) => console.log(v));
+
+            // console.log(typeof args);
+            // console.log(args);
+
+            // /* Array API*/
+            // //자바에서는 인터페이스를 사용
+            // args.forEach(function (v, i, a) {
+            //     console.log(v, i, a);
+            // });
+            // args.map(function (value, index, array) {
+            //     console.log(value, index, array);
+            // });
+            // // 길이 표현 lenght or size
+            // for (let i = 0; i < args.length; i++) {
+            //     console.log(args[i]);
+            // }
+        }
+        pringAll(1, 2, 3, 'a');
+
+        //자바스크립트에서는 오버로딩 개념 없음
+        function pringAll2() {
+            console.log(argsuments);
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        pringAll2();
+        pringAll2(1);
+        pringAll2(1, 2, 3);
+    </script>
+</body>
